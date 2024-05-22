@@ -79,7 +79,7 @@ def sync_folders(source, replica, log_file):
                 if not os.path.exists(source_dir):
                     shutil.rmtree(replica_dir)
                     log_operation(f"Removed directory: {replica_dir}", log_file)
-
+#STEP 3: LOG OPERATION
 #Here I define the log operation. It logs messages to both the log_file and the console.
 def log_operation(message, log_file):
      with open(log_file, "a") as log:
@@ -91,6 +91,7 @@ while True:
      sync_folders(args.source, args.replica, args.log_file)
      time.sleep(args.interval)
 
+#STEP 4:RUNNING THE PROGRAM
 #To run the program, I need to open a command prompt in the directory where the script is and type: python + program.py + (4 parameters: source location, replica location, interval and logfile) in the command-line.
 
 #Example: python ff_task.py (source location) (replica location) (interval time) (logfile location)
